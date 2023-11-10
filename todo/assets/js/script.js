@@ -1,11 +1,15 @@
-
 let arr=[];
 let ul= document.querySelector('ul');
 
 function save() {
     let str=document.getElementById('insert').value;
-    let li= document.createElement('li');
+    if(str==""){
+        alert("Please Enter some task")
+    }
+    else if(str!==""){
+        let li= document.createElement('li');
     ul.append(li);
+    ul.insertBefore(li, ul.childNodes[0])
     let parentBox= document.createElement('div');
     li.append(parentBox);
     parentBox.className="parentBox";
@@ -32,8 +36,9 @@ function save() {
     icon2.append(remove);
     remove.className="fa-solid fa-xmark fa-lg";
     document.getElementById('insert').value="";
+    }
+    
 }
-
 
 
 
