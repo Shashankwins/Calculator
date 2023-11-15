@@ -13,14 +13,23 @@ body section div p {
 }
 
 section {
-    background-color: #000;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(100,43,115,1) 0%, rgba(4,0,4,1) 90% );
     height: 100vh;
 }
 
-section h1 , section h3{
+section h1 {
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #fff;
+    text-align: center;
+    font-family: 'ralewayheavy';
+}
+
+section h3 {
     text-transform: capitalize;
     font-weight: 900;
     color: #fff;
+    margin-bottom: 10px;
 }
 
 #insert {
@@ -38,7 +47,7 @@ section h1 , section h3{
     padding: 5px 10px;
     outline: none;
     border: none;
-    background-color: black;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(100,43,115,1) 0%, rgba(4,0,4,1) 90% );
     border: 2px solid #fff;
 }
 
@@ -58,9 +67,18 @@ ul li {
     padding: 5px 20px;
     user-select: none;
     border-radius: 30px;
+    display: flex;
 }
 
-.parentBox {
+ul li button {
+    border: none;
+}
+
+ul li p {
+    flex-grow: 1;
+    align-self: center;
+}
+/* .parentBox {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -68,24 +86,23 @@ ul li {
 
 .content {
     flex-grow: 1;
-}
+} */
 
-.icon1 {
-    display: inline-block;
+.done {
+    float: right;
     width: 30px;
     height: 30px;
     line-height: 30px;
     text-align: center;
     border-radius: 50%;
-    
     color: #fff;
     background-color: #0f0;
     margin-right: 10px;
     cursor: pointer;
 }
 
-.icon2 {
-    display: inline-block;
+.remove {
+    float: right;
     width: 30px;
     height: 30px;
     line-height: 30px;
