@@ -1,13 +1,15 @@
 let arr=[];
 let ul= document.querySelector('ul');
-let r=document.getElementsByClassName('remove');
-
 function save() {
+    console.time("time");
     let str=document.getElementById('insert').value;
     if(str==""){
-        alert("Please Enter some task")
+        document.getElementById('insert').style.boxShadow="0px 0px 25px red";
+        document.getElementById('error').style.visibility="visible";
     }
     else if(str!==""){
+        document.getElementById('insert').style.boxShadow="none";
+        document.getElementById('error').style.visibility="hidden";
         let li= document.createElement('li');
         ul.insertBefore(li, ul.childNodes[0]);
         let task=document.createElement('p');
@@ -29,14 +31,15 @@ function save() {
         let d= document.getElementsByClassName('done');
         for(let i=0; i<d.length; i++){
             d[i].addEventListener('click', function(){
-            this.parentElement.firstElementChild.setAttribute("style", "text-decoration: line-through");
+                this.parentElement.firstElementChild.setAttribute("style", "text-decoration: line-through");
             })
         }
         let rem= document.getElementsByClassName('remove');
         for(let i=0; i<rem.length; i++){
             rem[i].addEventListener('click', function(){
-            this.parentElement.remove();
+                this.parentElement.remove();
             })
         }
     }
+    console.timeEnd("time");
 }
