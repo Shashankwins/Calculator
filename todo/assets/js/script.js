@@ -4,7 +4,7 @@ function save() {
     console.time("time");
     let str=document.getElementById('insert').value;
     if(str==""){
-        document.getElementById('insert').style.boxShadow="0px 0px 25px red";
+        document.getElementById('insert').style.boxShadow="0px 0px 20px red";
         document.getElementById('error').style.visibility="visible";
     }
     else if(str!==""){
@@ -32,6 +32,8 @@ function save() {
         for(let i=0; i<d.length; i++){
             d[i].addEventListener('click', function(){
                 this.parentElement.firstElementChild.setAttribute("style", "text-decoration: line-through");
+                // this.parentElement.setAttribute("style", "background-color: rgba( 0 , 255 , 0 , 0.6)" , "color: #fff");
+
             })
         }
         let rem= document.getElementsByClassName('remove');
