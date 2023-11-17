@@ -365,10 +365,9 @@ function print(a){
 console.log(print(b));
 
 //Pyramid pattern
-let input=prompt("Please enter how tall you want your Pyramid");
-let noOfRows=Number(input)
-console.log(typeof(noOfRows))
-Pyramid(noOfRows);
+let input=prompt("How tall you want your Pyramid");
+let noOfRows=Number(input);
+
 function Pyramid(a){
     let str="";
     for(let i=1;i<=a;i++)
@@ -391,3 +390,4 @@ function Pyramid(a){
     }
     return console.log(str);
 }
+Pyramid(noOfRows);
