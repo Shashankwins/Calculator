@@ -365,9 +365,10 @@ function print(a){
 console.log(print(b));
 
 //Pyramid pattern
-let input=prompt("How tall you want your Pyramid");
-let noOfRows=Number(input);
-
+let input=prompt("Please enter how tall you want your Pyramid");
+let noOfRows=Number(input)
+console.log(typeof(noOfRows))
+Pyramid(noOfRows);
 function Pyramid(a){
     let str="";
     for(let i=1;i<=a;i++)
@@ -390,4 +391,60 @@ function Pyramid(a){
     }
     return console.log(str);
 }
-Pyramid(noOfRows);
+
+
+//Pattern
+let count=1;
+for(let i=0;i<4;i++)
+{
+    let str="";
+    for(let j=0;j<=i;j++)
+    {
+        str=str+count;
+        count++;
+    }
+    console.log(str);
+}
+
+//Diamond Pattern
+let str="";
+let a=10;
+let b=a-1;
+for(let i=1;i<=a;i++)
+{
+  let left=a-i;
+  let right=a+i;
+  let col=a*2;
+  for(let j=1;j<=col;j++)
+      {
+        if(j>left && j<right)
+        {
+          str=str+"*";
+        }
+        else
+        {
+          str=str+" ";
+        }
+      }
+  str=str+"\n";
+}
+for(let i=b;i>=1;i--)
+{
+  str=str+" ";
+  let left=b-i;
+  let right=b+i;
+  let col=b*2-1;
+  for(let j=1;j<=col;j++)
+  {
+       if(j>left && j<right)
+        {
+          str=str+"*";
+        }
+        else
+        {
+          str=str+" ";
+        }
+  }
+  str=str+"\n"
+}
+console.log(str)
