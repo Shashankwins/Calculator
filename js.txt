@@ -365,22 +365,29 @@ function print(a){
 console.log(print(b));
 
 //Pyramid pattern
-let str="";
-for(let i=1;i<=5;i++)
-{
-  let l=5-i;
-  let r=5+i;
-  for(let j=1;j<=10;j++)
-  {
-    if(j>l && j<r)
+let input=prompt("Please enter how tall you want your Pyramid");
+let noOfRows=Number(input)
+console.log(typeof(noOfRows))
+Pyramid(noOfRows);
+function Pyramid(a){
+    let str="";
+    for(let i=1;i<=a;i++)
     {
-      str=str+"*"
+      let left=a-i;
+      let right=a+i;
+      let col=a*2;
+      for(let j=1;j<=col;j++)
+          {
+            if(j>left && j<right)
+            {
+              str=str+"*";
+            }
+            else
+            {
+              str=str+" ";
+            }
+          }
+      str=str+"\n";
     }
-    else
-    {
-      str=str+" "
-    }
-  }
-  str=str+"\n"
+    return console.log(str);
 }
-console.log(str);
