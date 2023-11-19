@@ -448,3 +448,29 @@ for(let i=b;i>=1;i--)
   str=str+"\n"
 }
 console.log(str)
+
+//string reverse at its pos
+let str="My name is Shashank";
+let a= str.length-1
+console.log(a);
+let str2="";
+let str3="";
+for(let i=0;i<=a;i++)
+{
+  if(str[i]!==" " && i!==a)
+  {
+    str2=str[i]+str2;
+  }
+  else if(str[i]==" ")
+  {
+    str2=str[i]+str2;
+    str3=str3+str2;
+    str2="";
+  }
+  else if(i==a)
+  {
+      str2=" "+str[i]+str2;
+      str3=str3+str2;
+  }
+}
+console.log(str3);
