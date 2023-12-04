@@ -1,3 +1,5 @@
+let flag = false;
+localStorage.setItem( 'flag' , JSON.stringify(flag))
 let login = document.querySelector('#loginForm');
 login.addEventListener('submit' , function(e) {
     e.preventDefault();
@@ -8,6 +10,8 @@ login.addEventListener('submit' , function(e) {
     {   
         if(data.psw === password)
         {
+            flag = true;
+            localStorage.setItem( 'flag' , JSON.stringify(flag))
             window.location.href='./home.html';
         }
         else

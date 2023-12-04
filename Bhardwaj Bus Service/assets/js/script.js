@@ -6,7 +6,6 @@
 //         this.mail = mail;
 //         this.psw = psw;
 //     }
-// 
 let signup = document.querySelector('#signUpForm');
 signup.addEventListener('submit' , function(e) {
     e.preventDefault();
@@ -87,6 +86,7 @@ function register(){
     localStorage.setItem( a.uname , JSON.stringify(a)) 
     cls();
     alert("Registered Successfully");
+    window.location.href="./index.html"
 }
 
 function cls() {
